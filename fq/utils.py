@@ -3,8 +3,8 @@ from fq import four_types
 COLS = 'ABCDEFGHJKLMNOPQRST'
 STONE_TO_CHAR = {
     None: ' . ',
-    four_types.Player.red: ' r ',
-    four_types.Player.yellow: ' y '
+    four_types.Player.red: '\33[41m r \33[0m',
+    four_types.Player.yellow: '\33[43m y \33[0m'
 }
 
 def print_move(player,move):
