@@ -191,11 +191,8 @@ class GameState():
         '''
         Return the new GameState after applying the move
         '''
-        if move.is_play:
-            next_board = copy.deepcopy(self.board)
-            next_board.place_disk(self.next_player,move.point)
-        else:
-            next_board = self.board
+        next_board = copy.deepcopy(self.board)
+        next_board.place_disk(self.next_player,move.point)
         return GameState(next_board, self.next_player.other, move)
     
     @classmethod
